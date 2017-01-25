@@ -7,6 +7,7 @@ import java.util.Observable;
 import java.util.ResourceBundle;
 
 import common.Level;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -99,6 +100,11 @@ sd.addEventFilter(MouseEvent.MOUSE_CLICKED, (e)->sd.requestFocus());
 		}
 		}
 	public void exit(){
+		Platform.exit();
+		LinkedList<String> params= new LinkedList<String>();
+		params.add("exit");
+		setChanged();
+		notifyObservers(params);
 
 	}
 

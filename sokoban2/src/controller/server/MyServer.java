@@ -28,7 +28,24 @@ public void runServer() throws Exception {
 		catch(SocketTimeoutException e){
 
 		}
-	}
+	}server.close();
+}
+public void openServer(){
+	Thread t= new Thread(new Runnable(){
+		@Override
+		public void run() {
+			while(!stop){
+				try {
+					runServer();
+				} catch (Exception e) {
+					//check were to send the message
+					e.printStackTrace();
+				}
+			}
+
+		}
+	});
+	t.start();
 }
 public void stopServer(){
 	stop=true;

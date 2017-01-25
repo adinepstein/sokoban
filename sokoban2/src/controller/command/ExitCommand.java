@@ -3,17 +3,23 @@ package controller.command;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import controller.Controller;
+import model.exitReciever.Exiter;
 import model.exitReciever.MyExiter;
 /**
  * @author Adin Epstein
  * @since 24/12/16
  * The class executes the exit command
- * 
+ *
  *
  */
 public class ExitCommand extends AbstractCommands {
-private boolean exitFlag;
-public ExitCommand() {
+
+	private boolean exitFlag;
+	private Controller controller;
+
+public ExitCommand(Controller controller) {
+	this.controller=controller;
  exitFlag=false;
 }
 /**
@@ -22,12 +28,12 @@ public ExitCommand() {
 	@Override
 	public void execute() throws FileNotFoundException, IOException,
 			ClassNotFoundException {
-		MyExiter me=new MyExiter();
+		Exiter me=new MyExiter(controller);
 		me.exiting();
-		exitFlag=me.isExitFlag();
+
 	}
 	/**
-	 * 
+	 *
 	 * @return true if the exit command was set
 	 */
 	public boolean isExitFlag() {

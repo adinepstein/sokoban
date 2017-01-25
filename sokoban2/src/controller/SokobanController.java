@@ -21,7 +21,6 @@ public class SokobanController implements Observer {
 	private Controller controller;
 	private HashMap<String, Command> commandMap;
 	private MyServer myServer;
-	private boolean stopServer;
 
 	public SokobanController(Model model,View view) {
 		this.model=model;
@@ -29,24 +28,19 @@ public class SokobanController implements Observer {
 		controller= new Controller();
 		controller.start();
 		initilizeCommandMap();
-		stopServer=false;
-	}
+		}
 
 	public Controller getController() {
 		return controller;
 	}
 
-	public boolean isStopServer() {
-		return stopServer;
-	}
+
 
 	public void setController(Controller controller) {
 		this.controller = controller;
 	}
 
-	public void setStopServer(boolean stopServer) {
-		this.stopServer = stopServer;
-	}
+
 
 	private void initilizeCommandMap(){
 		commandMap=new HashMap<String,Command>();
@@ -54,7 +48,7 @@ public class SokobanController implements Observer {
 		commandMap.put("display", new DisplayCommand(view,model));
 		commandMap.put("load", new LoadCommand(model));
 		commandMap.put("save", new SaveCommand(model));
-		commandMap.put("exit", new ExitCommand());
+		commandMap.put("exit", new ExitCommand(controller));
 
 	}
 	@Override
@@ -64,33 +58,15 @@ public class SokobanController implements Observer {
 		String commandKey = params.removeFirst();
 		Command c = commandMap.get(commandKey);
 
-		if(!(c.getClass().getSimpleName().equals("DisplayCommand")))
+		if(!(c.getClass().getSimpleName().equals("DisplayCommand"))&&!(c.getClass().getSimpleName().equals("ExitCommand")))
 				c.setParams(params);
 		this.controller.insertCommand(c);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
-	public void openServer(){
-		Thread t= new Thread(new Runnable(){
-			@Override
-			public void run() {
-				while(!stopServer){
-					try {
-						myServer.runServer();
-					} catch (Exception e) {
-						//check were to send the message
-						e.printStackTrace();
-					}
-				}
 
-			}
-		});
-		t.start();
-	}
-	public void stopServer(){
-		stopServer=true;
-	}
+
 
 	public void setMyServer(MyServer myServer) {
 		this.myServer = myServer;
