@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_111" class="java.beans.XMLDecoder">
+ <object class="common.Level" id="Level0">
+  <void property="height">
+   <int>7</int>
+  </void>
+  <void property="map">
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="model.data.character.Wall"/>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall0">
+       <void id="Point0" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point0"/>
+          <int>1</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall1">
+       <void id="Point1" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point1"/>
+          <int>2</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall2">
+       <void id="Point2" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point2"/>
+          <int>3</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall3">
+       <void id="Point3" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point3"/>
+          <int>4</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall4">
+       <void id="Point4" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point4"/>
+          <int>1</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor0">
+       <void id="Point5" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point5"/>
+          <int>1</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point5"/>
+          <int>1</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor1">
+       <void id="Point6" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point6"/>
+          <int>1</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point6"/>
+          <int>2</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor2">
+       <void id="Point7" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point7"/>
+          <int>1</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point7"/>
+          <int>3</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall5">
+       <void id="Point8" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point8"/>
+          <int>1</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point8"/>
+          <int>4</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall6">
+       <void id="Point9" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point9"/>
+          <int>2</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor3">
+       <void id="Point10" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point10"/>
+          <int>2</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point10"/>
+          <int>1</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor4">
+       <void id="Point11" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point11"/>
+          <int>2</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point11"/>
+          <int>2</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor5">
+       <void id="Point12" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point12"/>
+          <int>2</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point12"/>
+          <int>3</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall7">
+       <void id="Point13" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point13"/>
+          <int>2</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point13"/>
+          <int>4</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall8">
+       <void id="Point14" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point14"/>
+          <int>3</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor6">
+       <void id="Point15" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point15"/>
+          <int>3</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point15"/>
+          <int>1</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Player" id="Player0">
+       <void property="floorFlag">
+        <boolean>false</boolean>
+       </void>
+       <void id="Point16" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point16"/>
+          <int>3</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point16"/>
+          <int>2</int>
+         </void>
+        </void>
+       </void>
+       <void property="targetFlag">
+        <boolean>true</boolean>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Box" id="Box0">
+       <void property="floorFlag">
+        <boolean>false</boolean>
+       </void>
+       <void id="Point17" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point17"/>
+          <int>3</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point17"/>
+          <int>3</int>
+         </void>
+        </void>
+       </void>
+       <void property="targetFlag">
+        <boolean>true</boolean>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall9">
+       <void id="Point18" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point18"/>
+          <int>3</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point18"/>
+          <int>4</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall10">
+       <void id="Point19" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point19"/>
+          <int>4</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor7">
+       <void id="Point20" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point20"/>
+          <int>4</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point20"/>
+          <int>1</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Box" id="Box1">
+       <void id="Point21" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point21"/>
+          <int>4</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point21"/>
+          <int>2</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor8">
+       <void id="Point22" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point22"/>
+          <int>4</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point22"/>
+          <int>3</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall11">
+       <void id="Point23" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point23"/>
+          <int>4</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point23"/>
+          <int>4</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall12">
+       <void id="Point24" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point24"/>
+          <int>5</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor9">
+       <void id="Point25" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point25"/>
+          <int>5</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point25"/>
+          <int>1</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor10">
+       <void id="Point26" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point26"/>
+          <int>5</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point26"/>
+          <int>2</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Floor" id="Floor11">
+       <void id="Point27" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point27"/>
+          <int>5</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point27"/>
+          <int>3</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall13">
+       <void id="Point28" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point28"/>
+          <int>5</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point28"/>
+          <int>4</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall14">
+       <void id="Point29" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point29"/>
+          <int>6</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall15">
+       <void id="Point30" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point30"/>
+          <int>6</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point30"/>
+          <int>1</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall16">
+       <void id="Point31" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point31"/>
+          <int>6</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point31"/>
+          <int>2</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall17">
+       <void id="Point32" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point32"/>
+          <int>6</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point32"/>
+          <int>3</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.data.character.Wall" id="Wall18">
+       <void id="Point33" property="position">
+        <void class="java.awt.Point" method="getField">
+         <string>x</string>
+         <void method="set">
+          <object idref="Point33"/>
+          <int>6</int>
+         </void>
+        </void>
+        <void class="java.awt.Point" method="getField">
+         <string>y</string>
+         <void method="set">
+          <object idref="Point33"/>
+          <int>4</int>
+         </void>
+        </void>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="numOfBoxOnTarget">
+   <int>1</int>
+  </void>
+  <void property="numOfTargets">
+   <int>2</int>
+  </void>
+  <void property="playerPosition">
+   <object idref="Point16"/>
+  </void>
+  <void id="Point34" property="startPoint">
+   <void class="java.awt.Point" method="getField">
+    <string>x</string>
+    <void method="set">
+     <object idref="Point34"/>
+     <int>1</int>
+    </void>
+   </void>
+   <void class="java.awt.Point" method="getField">
+    <string>y</string>
+    <void method="set">
+     <object idref="Point34"/>
+     <int>1</int>
+    </void>
+   </void>
+  </void>
+  <void property="width">
+   <int>5</int>
+  </void>
+ </object>
+</java>
