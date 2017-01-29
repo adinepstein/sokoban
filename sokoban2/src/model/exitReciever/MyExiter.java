@@ -1,6 +1,7 @@
 package model.exitReciever;
 
 import controller.Controller;
+import controller.ControllerInterface;
 
 /**
  *
@@ -12,18 +13,20 @@ import controller.Controller;
  */
 public class MyExiter extends AbstractExiter {
 
-	private Controller controller;
+	private ControllerInterface controllerInterface;
 
-public MyExiter(Controller controller) {
- this.controller=controller;
+public MyExiter(ControllerInterface controller) {
+ this.controllerInterface=controller;
 }
 
 
 	@Override
 	public void exiting() {
 
-		controller.stop();
+		controllerInterface.getController().stop();
 
+		if(controllerInterface.getServer()!=null)
+		 controllerInterface.getServer().stopServer();
 	}
 
 }

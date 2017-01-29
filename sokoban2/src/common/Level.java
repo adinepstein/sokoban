@@ -21,6 +21,7 @@ public class Level implements Serializable {
 	private int numOfBoxOnTarget;
 	private int height;
 	private int width;
+	private int numOfSteps;
 
 	public Level() {
 	 map= new ArrayList<ArrayList<GameCharacters>>();
@@ -28,6 +29,7 @@ public class Level implements Serializable {
 	 playerPosition= new Point(0,0);
 	 numOfTargets=0;
 	 numOfBoxOnTarget=0;
+	 numOfSteps=0;
 	 	}
 	/**
 	 *
@@ -132,6 +134,12 @@ public class Level implements Serializable {
 	}
 	public void setWidth(int width) {
 		this.width = width;
+	}
+	public int getNumOfSteps() {
+		return numOfSteps;
+	}
+	public void setNumOfSteps(int numOfSteps) {
+		this.numOfSteps = numOfSteps;
 	}
 
 

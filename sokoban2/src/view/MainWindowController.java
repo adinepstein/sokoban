@@ -11,6 +11,7 @@ import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -20,10 +21,17 @@ import javafx.stage.FileChooser.ExtensionFilter;
 public class MainWindowController extends Observable implements View,Initializable{
 
 	@FXML
-	SokobanDisplayer sd;
+	private SokobanDisplayer sd;
+	@FXML
+    private Label numOfSteps;
 
+
+public MainWindowController() {
+	numOfSteps=new Label("0");
+}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		numOfSteps.textProperty().bind(sd.getSteps());
 sd.addEventFilter(MouseEvent.MOUSE_CLICKED, (e)->sd.requestFocus());
 
 		sd.setOnKeyPressed(new EventHandler<KeyEvent>(){
@@ -64,6 +72,7 @@ sd.addEventFilter(MouseEvent.MOUSE_CLICKED, (e)->sd.requestFocus());
 	}
 
 	public void openFile(){
+		numOfSteps.setText("0");
 		FileChooser fc=new FileChooser();
 		fc.setTitle("open file");
 		fc.setInitialDirectory(new File("./resources/levels"));
@@ -108,10 +117,10 @@ sd.addEventFilter(MouseEvent.MOUSE_CLICKED, (e)->sd.requestFocus());
 
 	}
 
+
 	@Override
 	public void display(Level level) {
 		sd.setLevel(level);
-
 	}
 
 

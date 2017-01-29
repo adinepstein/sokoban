@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import controller.Controller;
+import controller.ControllerInterface;
 import model.exitReciever.Exiter;
 import model.exitReciever.MyExiter;
 /**
@@ -16,10 +17,10 @@ import model.exitReciever.MyExiter;
 public class ExitCommand extends AbstractCommands {
 
 	private boolean exitFlag;
-	private Controller controller;
+	private ControllerInterface controllerInterface;
 
-public ExitCommand(Controller controller) {
-	this.controller=controller;
+public ExitCommand(ControllerInterface controllerInterface) {
+	this.controllerInterface=controllerInterface;
  exitFlag=false;
 }
 /**
@@ -28,7 +29,7 @@ public ExitCommand(Controller controller) {
 	@Override
 	public void execute() throws FileNotFoundException, IOException,
 			ClassNotFoundException {
-		Exiter me=new MyExiter(controller);
+		Exiter me=new MyExiter(controllerInterface);
 		me.exiting();
 
 	}

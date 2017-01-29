@@ -36,8 +36,8 @@ public class MoveCommand extends AbstractCommands {
 	public void execute() throws FileNotFoundException, IOException,
 			ClassNotFoundException {
 		direction=params.removeFirst();
+		model.getLevel().setNumOfSteps(model.getLevel().getNumOfSteps()+1);
 		model.move(direction);
-
 
 	}
 

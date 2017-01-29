@@ -11,16 +11,18 @@ import controller.command.ExitCommand;
 import controller.command.LoadCommand;
 import controller.command.MoveCommand;
 import controller.command.SaveCommand;
+import controller.server.ClientHandler;
 import controller.server.MyServer;
+import controller.server.Server;
 import model.Model;
 import view.View;
 
-public class SokobanController implements Observer {
+public class SokobanController implements Observer, ControllerInterface {
 	private Model model;
 	private View view;
 	private Controller controller;
 	private HashMap<String, Command> commandMap;
-	private MyServer myServer;
+	private Server server;
 
 	public SokobanController(Model model,View view) {
 		this.model=model;
@@ -29,7 +31,16 @@ public class SokobanController implements Observer {
 		controller.start();
 		initilizeCommandMap();
 		}
-
+	public SokobanController(Model model,View view,ClientHandler ch,int port) {
+		this.model=model;
+		this.view=view;
+		controller= new Controller();
+		controller.start();
+		initilizeCommandMap();
+		server= new MyServer(port,ch);
+		server.openServer();
+		}
+	@Override
 	public Controller getController() {
 		return controller;
 	}
@@ -48,7 +59,7 @@ public class SokobanController implements Observer {
 		commandMap.put("display", new DisplayCommand(view,model));
 		commandMap.put("load", new LoadCommand(model));
 		commandMap.put("save", new SaveCommand(model));
-		commandMap.put("exit", new ExitCommand(controller));
+		commandMap.put("exit", new ExitCommand(this));
 
 	}
 	@Override
@@ -68,8 +79,13 @@ public class SokobanController implements Observer {
 
 
 
-	public void setMyServer(MyServer myServer) {
-		this.myServer = myServer;
+	public void setServer(Server server) {
+		this.server = server;
+	}
+	@Override
+	public Server getServer() {
+
+		return server;
 	}
 
 }

@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 import common.Level;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.scene.canvas.Canvas;
@@ -18,6 +20,7 @@ public class SokobanDisplayer extends Canvas {
 	private StringProperty targetFileName;
 	private StringProperty boxFileName;
 	private StringProperty floorFileName;
+	private StringProperty steps;
 	private Level level;
 
 	public SokobanDisplayer() {
@@ -26,8 +29,11 @@ public class SokobanDisplayer extends Canvas {
 		targetFileName=new SimpleStringProperty();
 		boxFileName=new SimpleStringProperty();
 		floorFileName=new SimpleStringProperty();
+		steps=new SimpleStringProperty(Integer.toBinaryString(level.getNumOfSteps()));
 
 	}
+
+
 
 	public void redraw() {
 		double W=getWidth();
@@ -72,6 +78,14 @@ public class SokobanDisplayer extends Canvas {
 	public void setLevel(Level level) {
 		this.level = level;
 		redraw();
+
+	}
+	public StringProperty getSteps() {
+		return steps;
+	}
+
+	public void setSteps(String steps) {
+		this.steps.set(steps);
 	}
 
 	public String getWallFileName() {

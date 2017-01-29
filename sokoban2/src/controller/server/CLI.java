@@ -16,36 +16,41 @@ import java.util.Observable;
  *
  */
 public class CLI extends Observable implements ClientHandler {
-		private PrintWriter writer;
-		private BufferedReader reader;
 
+	private boolean exitFlag;
+	String commandLine;
+	LinkedList<String> params;
 
+	public CLI() {
+	exitFlag=false;
+	commandLine="";
+	params= new LinkedList<String>();
+	}
 	@Override
 	public void handleClient(InputStream inFromClient, OutputStream outToClient) {
-		writer=new PrintWriter(outToClient);
-		reader=new BufferedReader(new InputStreamReader(inFromClient));
+		PrintWriter writer=new PrintWriter(outToClient);
+		BufferedReader reader=new BufferedReader(new InputStreamReader(inFromClient));
 
-		String commandLine="";
-		do{
+		while(!exitFlag){
 			writer.write("Please enter a command: ");
 			writer.flush();
 			try {
 				commandLine = reader.readLine();
+				commandLine=commandLine.toLowerCase();
 				String[] arr = commandLine.split(" ");
-				LinkedList<String> params = new LinkedList<String>();
+				 params.clear();
 				for (String param : arr) {
 					params.add(param);
 				}
-				if(!commandLine.equals("exit")){
+				if(commandLine.equals("exit"))
+					exitFlag=false;
+					writer.write("bye");
+
 					setChanged();
 					notifyObservers(params);
-					}
-			 	} catch (IOException e) {
 
-				e.printStackTrace();
-			}
+			 	} catch (IOException e) {e.printStackTrace();}
 
-		}while(!commandLine.equals("exit"));
-	}
+		}	}
 
 }

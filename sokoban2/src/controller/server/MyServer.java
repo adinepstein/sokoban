@@ -2,9 +2,8 @@ package controller.server;
 
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketTimeoutException;
 
-public class MyServer  {
+public class MyServer implements Server {
 	private int port;
 	private ClientHandler ch;
 	private boolean stop;
@@ -16,20 +15,23 @@ public class MyServer  {
 	}
 public void runServer() throws Exception {
 	ServerSocket server=new ServerSocket(port);
-	server.setSoTimeout(1000);
 	while(!stop){
 		try{
-		Socket aClient=server.accept();
-		ch.handleClient(aClient.getInputStream(), aClient.getOutputStream());
-		aClient.getInputStream().close();
-		aClient.getOutputStream().close();
-		aClient.close();
-		}
-		catch(SocketTimeoutException e){
+			System.out.println("Server waiting for client");
+			Socket aClient=server.accept();
+			System.out.println("client connected");
 
+			ch.handleClient(aClient.getInputStream(), aClient.getOutputStream());
+			aClient.getInputStream().close();
+			aClient.getOutputStream().close();
+			aClient.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
 		}
 	}server.close();
 }
+@Override
 public void openServer(){
 	Thread t= new Thread(new Runnable(){
 		@Override
@@ -42,11 +44,11 @@ public void openServer(){
 					e.printStackTrace();
 				}
 			}
-
 		}
 	});
 	t.start();
 }
+@Override
 public void stopServer(){
 	stop=true;
 }
