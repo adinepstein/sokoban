@@ -45,27 +45,11 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Time:" textFill="#cd2c1b">
-               <HBox.margin>
-                  <Insets bottom="20.0" left="200.0" top="10.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label prefHeight="20.0" prefWidth="41.0" text="Label" textFill="#cf0606">
-               <HBox.margin>
-                  <Insets left="20.0" top="15.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-         </children>
+           </children>
       </HBox>
    </bottom>
    <center>
-      <SokobanDisplayer fx:id="sd" height="600.0" width="600.0" BorderPane.alignment="CENTER" wallFileName="./resources/images/wall.jpg" boxFileName="./resources/images/box.jpg" targetFileName="./resources/images/target.jpg" characterFileName="./resources/images/player.jpg" floorFileName="./resources/images/floor.jpg"/>
+      <SokobanDisplayer fx:id="sd" height="800.0" width="800.0" BorderPane.alignment="CENTER" wallFileName="./resources/images/wall.jpg" boxFileName="./resources/images/box.jpg" targetFileName="./resources/images/target.jpg" characterFileName="./resources/images/player.jpg" floorFileName="./resources/images/floor.jpg"/>
    </center>
 
 </BorderPane>

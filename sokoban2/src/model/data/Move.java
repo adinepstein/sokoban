@@ -81,7 +81,7 @@ public class Move {
 		else{
 			level.getMap().get(xPlayer).set(yPlayer, new Target(xPlayer,yPlayer));
 		}
-
+		level.setNumOfSteps(level.getNumOfSteps()+1);
 	}
 
 

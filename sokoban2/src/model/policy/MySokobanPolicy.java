@@ -82,6 +82,7 @@ private void findCharNext(String choice){
 		}
 		else if(checkFloor(characterNext)||checkTarget(characterNext)){
 			mover.move(player, characterNext);
+			
 		}
 		else{
 			if(checkWall(characterNextNext)||checkBox(characterNextNext)){

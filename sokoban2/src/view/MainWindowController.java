@@ -31,7 +31,7 @@ public MainWindowController() {
 }
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		numOfSteps.textProperty().bind(sd.getSteps());
+
 sd.addEventFilter(MouseEvent.MOUSE_CLICKED, (e)->sd.requestFocus());
 
 		sd.setOnKeyPressed(new EventHandler<KeyEvent>(){
@@ -65,7 +65,7 @@ sd.addEventFilter(MouseEvent.MOUSE_CLICKED, (e)->sd.requestFocus());
 					setChanged();
 					notifyObservers(params);
 				}
-
+					numOfSteps.setText(Integer.toString(sd.getLevel().getNumOfSteps()));
 				}
 		});
 

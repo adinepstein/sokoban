@@ -20,7 +20,6 @@ public class SokobanDisplayer extends Canvas {
 	private StringProperty targetFileName;
 	private StringProperty boxFileName;
 	private StringProperty floorFileName;
-	private StringProperty steps;
 	private Level level;
 
 	public SokobanDisplayer() {
@@ -29,7 +28,6 @@ public class SokobanDisplayer extends Canvas {
 		targetFileName=new SimpleStringProperty();
 		boxFileName=new SimpleStringProperty();
 		floorFileName=new SimpleStringProperty();
-		steps=new SimpleStringProperty(Integer.toBinaryString(level.getNumOfSteps()));
 
 	}
 
@@ -80,13 +78,7 @@ public class SokobanDisplayer extends Canvas {
 		redraw();
 
 	}
-	public StringProperty getSteps() {
-		return steps;
-	}
 
-	public void setSteps(String steps) {
-		this.steps.set(steps);
-	}
 
 	public String getWallFileName() {
 		return wallFileName.get();
