@@ -42,29 +42,24 @@ public class MyTextLevelLoader implements LevelLoader {
 				switch(c){
 				case '#':
 					level.getMap().get(i).add(new Wall());
-					level.getMap().get(i).get(j).getPosition().setLocation(i, j);
 					break;
 				case '@':
 					level.getMap().get(i).add(new Box());
-					level.getMap().get(i).get(j).getPosition().setLocation(i, j);
 					break;
 				case ' ':
 					level.getMap().get(i).add(new Floor());
-					level.getMap().get(i).get(j).getPosition().setLocation(i, j);
 					break;
 				case 'o':
 					level.getMap().get(i).add(new Target());
-					level.getMap().get(i).get(j).getPosition().setLocation(i, j);
 					level.addTarget();
 					break;
 				case 'A':
 					level.getMap().get(i).add(new Player());
-					level.getMap().get(i).get(j).getPosition().setLocation(i, j);
 					level.getStartPoint().setLocation(i,j);
 					level.getPlayerPosition().setLocation(i,j);
 					break;
 				}
-
+				level.getMap().get(i).get(j).getPosition().setLocation(i, j);
 			}
 			if(level.getMap().get(i).size()>level.getWidth())
 				level.setWidth(level.getMap().get(i).size());
